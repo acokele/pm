@@ -176,7 +176,11 @@ return [
         // PM\Providers\BroadcastServiceProvider::class,
         PM\Providers\EventServiceProvider::class,
         PM\Providers\RouteServiceProvider::class,
-
+        
+        /*
+        * Custom Service Providers...
+        */
+        Baum\Providers\BaumServiceProvider::class,
     ],
 
     /*
@@ -225,7 +229,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        
+        'Baum' => Baum\Providers\BaumServiceProvider::class,
     ],
 
 ];
