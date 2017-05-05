@@ -1,4 +1,6 @@
 <?php
+namespace PM\Models;
+
 use Baum\Node;
 
 /**

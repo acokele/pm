@@ -2,10 +2,18 @@
 
 namespace PM\Http\Controllers;
 
+use PM\Repositories\TaskRepository as TaskRepository;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
+    protected $tasks;
+
+    public function __construct(TaskRepository $tasks)
+    {
+        $this->tasks = $tasks;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +21,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-       return '1';
+       return $this->tasks->getAll();
     }
 
     /**
