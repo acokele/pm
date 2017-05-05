@@ -21,7 +21,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-       return $this->tasks->getAll();
+       return view('layouts.main');
     }
 
     /**
