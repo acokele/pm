@@ -1,4 +1,4 @@
-<div class="progress xs">
+<div class="progress">
     <div 
     @if($percent <= 30)
         class="progress-bar progress-bar-danger" 
@@ -7,5 +7,5 @@
     @else
         class="progress-bar progress-bar-yellow" 
     @endif
-        style="width: {{ $percent }}%"></div>
+        style="width: {{ $percent }}%">{{$percent}}%</div>
 </div>
