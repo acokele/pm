@@ -9,7 +9,7 @@ class ProjectController extends Controller
 {
     protected $projects;
 
-    public function __construct(ProjectController $projects)
+    public function __construct(ProjectRepository $projects)
     {
         $this->projects = $projects;
     }
@@ -21,7 +21,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-       return view('layouts.main');
+       return $this->projects->getAll();
     }
 
     /**

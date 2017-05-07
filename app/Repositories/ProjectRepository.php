@@ -1,17 +1,18 @@
 <?php
 namespace PM\Repositories;
 
+use PM\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectRepository 
 {
     public function getAll()
     {
-        return ["a" => 1];
+        return Project::all();
     }
 
     public function getbyId($id)
     {
-        return "2";
+        return Project::find($id);
     }
 }
