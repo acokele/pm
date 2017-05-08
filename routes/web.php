@@ -12,9 +12,7 @@
 */
 use PM\Models\User;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('setup', function(){
     $admin = new User();
@@ -27,3 +25,7 @@ Route::get('setup', function(){
 
 Route::resource('tasks', 'TaskController');
 Route::resource('projects', 'ProjectController');
+
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
