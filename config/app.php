@@ -181,6 +181,7 @@ return [
         * Custom Service Providers...
         */
         Baum\Providers\BaumServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
     ],
 
     /*
@@ -231,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         
         'Baum' => Baum\Providers\BaumServiceProvider::class,
+        'Entrust' => Zizaco\Entrust\EntrustFacade::class,
     ],
 
 ];

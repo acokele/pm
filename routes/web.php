@@ -10,9 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use PM\Models\User;
 
 Route::get('/', function () {
     return view('home');
+});
+
+Route::get('setup', function(){
+    $admin = new User();
+    $admin->name = 'Administrator';
+    $admin->email = 'admin@pm.dev';
+    $admin->password = bcrypt('stablo');
+    $admin->remember_token = str_random(10);
+    $admin->save();
 });
 
 Route::resource('tasks', 'TaskController');
